@@ -24,8 +24,7 @@ set smartindent
 
 set iskeyword=@,48-57,192-255
 
-" set wildignore+=*/tmp/*,*.so,*.swp,*.zip
-" let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let mapleader=','
 
 " Escape/unescape & < > HTML entities in range (default current line).
 function! HtmlEntities(line1, line2, action)
