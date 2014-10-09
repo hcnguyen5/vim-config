@@ -71,8 +71,8 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 " Unite
-nnoremap <C-p> :UniteWithProjectDir file_rec/async<cr>
-nnoremap <space>/ :Unite ag:.<cr>
+" nnoremap <C-p> :UniteWithProjectDir file_rec/async<cr>
+" nnoremap <space>/ :Unite ag:.<cr>
 
 " Rooter
 " autocmd BufEnter * :Rooter
