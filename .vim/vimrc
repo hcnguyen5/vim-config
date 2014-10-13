@@ -14,6 +14,7 @@ Plugin 'gmarik/Vundle.vim'
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
 Plugin 'airblade/vim-rooter'
+Plugin 'bkad/CamelCaseMotion'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'ervandew/supertab'
@@ -65,7 +66,7 @@ filetype plugin indent on    " required
 " :PluginList       - lists configured plugins
 " :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
 " :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
@@ -76,6 +77,14 @@ filetype plugin indent on    " required
 
 " Rooter
 " autocmd BufEnter * :Rooter
+
+" CamelCaseMotion
+"map <silent> w <Plug>CamelCaseMotion_w
+"map <silent> b <Plug>CamelCaseMotion_b
+"map <silent> e <Plug>CamelCaseMotion_e
+"sunmap w
+"sunmap b
+"sunmap e
 
 " ctrlp
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/vendor/*,*/\.git/*
@@ -97,6 +106,11 @@ let g:syntastic_error_symbol="✗"
 let g:syntastic_warning_symbol="⚠"
 let g:syntastic_style_error_symbol="✗"
 let g:syntastic_style_warning_symbol="⚠"
+
+" Leader keys
+silent! nmap <silent> <Leader>p :NERDTreeToggle<CR>
+nnoremap <Leader>b :BufExplorer<cr>
+
 
 "allow backspacing over everything in insert mode
 set backspace=indent,eol,start
