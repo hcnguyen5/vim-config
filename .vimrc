@@ -57,7 +57,10 @@ highlight       Search    ctermfg=White
 nmap <silent> <BS> :nohlsearch
 set nohlsearch
 
-" set timeoutlen=100
+" reduce vim key command lag
+set timeout
+set timeoutlen=600
+set ttimeoutlen=100
 
 "====[ Goto last location in non-empty files ]=======
 
@@ -72,7 +75,7 @@ nmap S  :%s//g<LEFT><LEFT>
 vmap S  :s//g<LEFT><LEFT>
 
 " Cursor colum shortcut
-nmap <Leader>c :set invcursorcolumn<CR>
+nmap <silent> <Leader>c :set invcursorcolumn<CR>
 
 "=======[ Fix smartindent stupidities ]============
 
