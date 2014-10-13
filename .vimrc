@@ -1,10 +1,8 @@
+let mapleader = ","
+
 source ~/.vim/vimrc
 
 set guifont=Monaco:h10
-
-filetype plugin indent on
-
-syntax enable
 
 au BufNewFile,BufRead *.handlebars setlocal ft=html
 
@@ -21,10 +19,6 @@ set tabstop=2
 set shiftwidth=2
 set autoindent
 set smartindent
-
-set iskeyword=@,48-57,192-255
-
-let mapleader=','
 
 " Escape/unescape & < > HTML entities in range (default current line).
 function! HtmlEntities(line1, line2, action)
@@ -63,17 +57,7 @@ highlight       Search    ctermfg=White
 nmap <silent> <BS> :nohlsearch
 set nohlsearch
 
-set timeoutlen=100
-
-"====[ Edit and auto-update this config file and plugins ]==========
-
-augroup VimReload
-autocmd!
-    autocmd BufWritePost $MYVIMRC source $MYVIMRC
-augroup END
-
-nmap <silent>  ;v   [Edit .vimrc]          :next $MYVIMRC<CR>
-nmap           ;vv  [Edit .vim/plugin/...] :next $HOME/.vim/plugin/
+" set timeoutlen=100
 
 "====[ Goto last location in non-empty files ]=======
 
@@ -84,8 +68,11 @@ autocmd BufReadPost *  if line("'\"") > 1 && line("'\"") <= line("$")
 
 "====[ I'm sick of typing :%s/.../.../g ]=======
 
-nmap S  [Shortcut for :s///g]  :%s//g<LEFT><LEFT>
-vmap S                         :s//g<LEFT><LEFT>
+nmap S  :%s//g<LEFT><LEFT>
+vmap S  :s//g<LEFT><LEFT>
+
+" Cursor colum shortcut
+nmap <Leader>c :set invcursorcolumn<CR>
 
 "=======[ Fix smartindent stupidities ]============
 
@@ -114,20 +101,4 @@ vmap <BS> x
 
 " Use space to jump down a page (like browsers do)...
 " nnoremap <Space> <PageDown>
-
-"=====[ Show the column marker in visual insert mode ]====================
-
-vnoremap <silent>  I  I<C-R>=TemporaryColumnMarkerOn()<CR>
-vnoremap <silent>  A  A<C-R>=TemporaryColumnMarkerOn()<CR>
-
-function! TemporaryColumnMarkerOn ()
-    set cursorcolumn
-    inoremap <silent>  <ESC>  <ESC>:call TemporaryColumnMarkerOff()<CR>
-    return ""
-endfunction
-
-function! TemporaryColumnMarkerOff ()
-    set nocursorcolumn
-    iunmap <ESC>
-endfunction
 
