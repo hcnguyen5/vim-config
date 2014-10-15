@@ -43,6 +43,7 @@ Plugin 'vim-scripts/xoria256.vim'
 
 Plugin 'IndexedSearch'
 Plugin 'taglist-plus'
+Plugin 'Vim-R-plugin'
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
