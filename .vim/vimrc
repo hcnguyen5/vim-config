@@ -109,7 +109,8 @@ let g:syntastic_style_error_symbol="✗"
 let g:syntastic_style_warning_symbol="⚠"
 
 " Leader keys
-silent! nmap <silent> <Leader>p :NERDTreeToggle<CR>
+silent! nmap <silent> <Leader>p :NERDTreeFind<CR>
+silent! nmap <silent> <Leader>P :NERDTreeToggle<CR>
 nnoremap <Leader>b :BufExplorer<cr>
 
 
