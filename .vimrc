@@ -2,7 +2,7 @@ let mapleader = ","
 
 source ~/.vim/vimrc
 
-set guifont=Monaco:h10
+set guifont=Hack:h10
 
 au BufNewFile,BufRead *.handlebars setlocal ft=html
 
@@ -19,6 +19,7 @@ set tabstop=2
 set shiftwidth=2
 set autoindent
 set smartindent
+set autoread
 
 " Escape/unescape & < > HTML entities in range (default current line).
 function! HtmlEntities(line1, line2, action)
