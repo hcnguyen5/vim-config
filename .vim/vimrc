@@ -227,3 +227,6 @@ map <C-l> <C-w>l
 
 "key mapping for saving file
 nmap <C-s> :w<CR>
+
+" Search up for tag file
+set tags=tags;
