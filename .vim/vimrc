@@ -25,6 +25,7 @@ Plugin 'jeetsukumaran/vim-buffergator'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'kana/vim-textobj-user'
 Plugin 'kien/ctrlp.vim'
+Plugin 'majutsushi/tagbar'
 Plugin 'nelstrom/vim-textobj-rubyblock'
 Plugin 'rking/ag.vim'
 "Plugin 'Shougo/unite.vim'
@@ -41,9 +42,9 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-vividchalk'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'vim-scripts/xoria256.vim'
+"Plugin 'xolox/vim-easytags'
 
 Plugin 'IndexedSearch'
-Plugin 'taglist-plus'
 Plugin 'Vim-R-plugin'
 
 " plugin from http://vim-scripts.org/vim/scripts.html
