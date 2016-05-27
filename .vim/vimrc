@@ -95,8 +95,8 @@ let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_by_filename = 1
 let g:ctrlp_regexp = 1
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/](\.git|tmp|node_modules|build|resources)$',
-  \ 'file': '\v\.(exe|so|dll|jpg|png|jpeg|ico|o)$',
+  \ 'dir':  '\v[\/](\.git|tmp|node_modules|build|logs|log)$',
+  \ 'file': '\v\.(exe|so|dll|jpg|png|jpeg|ico|o|log)$',
   \ 'link': 'some_bad_symbolic_links',
   \ }
 
@@ -114,7 +114,7 @@ let g:syntastic_style_warning_symbol="⚠"
 silent! nmap <silent> <Leader>p :NERDTreeFind<CR>
 silent! nmap <silent> <Leader>P :NERDTreeToggle<CR>
 nnoremap <Leader>b :BufExplorer<cr>
-
+nnoremap <Leader>t :TabbarToggle<cr>
 
 "allow backspacing over everything in insert mode
 set backspace=indent,eol,start
