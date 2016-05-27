@@ -1,2 +1,6 @@
 .vim/.netrwhist
 *.swp
+
+bak/
+swp/
+undo/

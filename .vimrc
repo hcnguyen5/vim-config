@@ -3,7 +3,11 @@ let mapleader = ","
 source ~/.vim/vimrc
 
 set guifont=Hack:h10
-set backupdir=~/.vimbak
+set backupdir=~/.vim/bak//
+set directory=~/.vim/swp//
+set undodir=~/.vim/undo//
+
+set undofile
 
 au BufNewFile,BufRead *.handlebars setlocal ft=html
 
