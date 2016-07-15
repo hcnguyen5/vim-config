@@ -60,7 +60,7 @@ highlight clear Search
 highlight       Search    ctermfg=White
 
 "Delete in normal mode switches off highlighting till next search...
-nmap <silent> <BS> :nohlsearch
+"nmap <silent> <BS> :nohlsearch
 set nohlsearch
 
 " reduce vim key command lag
