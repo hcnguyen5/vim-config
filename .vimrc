@@ -2,7 +2,7 @@ let mapleader = ","
 
 source ~/.vim/vimrc
 
-set guifont=Hack:h10
+set guifont=HackLig-Regular:h10
 set backupdir=~/.vim/bak//
 set directory=~/.vim/swp//
 set undodir=~/.vim/undo//
