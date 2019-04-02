@@ -26,29 +26,6 @@ set autoindent
 set smartindent
 set autoread
 
-" Escape/unescape & < > HTML entities in range (default current line).
-function! HtmlEntities(line1, line2, action)
-  let search = @/
-  let range = 'silent ' . a:line1 . ',' . a:line2
-  if a:action == 0  " must convert &amp; last
-    execute range . 'sno/&lt;/</eg'
-    execute range . 'sno/&gt;/>/eg'
-    execute range . 'sno/&amp;/&/eg'
-  else              " must convert & first
-    execute range . 'sno/&/&amp;/eg'
-    execute range . 'sno/</&lt;/eg'
-    execute range . 'sno/>/&gt;/eg'
-    execute range . 'sno/"/&quot;/eg'
-    execute range . "sno/'/&apos;/eg"
-    execute range . "sno/{{/&#123;{/eg"
-  endif
-  nohl
-  let @/ = search
-endfunction
-command! -range -nargs=1 Entities call HtmlEntities(<line1>, <line2>, <args>)
-vnoremap <silent> h :Entities 1<CR>
-vnoremap <silent> H :Entities 0<CR>
-
 "====[ Set up smarter search behaviour ]=======================
 
 set incsearch       "Lookahead as search pattern is specified
